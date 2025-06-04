@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, EB_Garamond } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 
@@ -11,6 +11,13 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+
+const garamond = EB_Garamond({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -27,22 +34,22 @@ export default function RootLayout({
     <html lang="en">
 
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${garamond.className} antialiased`}
       >
-        <div className="bg-[#fae588] min-h-screen flex flex-col items-center justify-center">
-          <header className="w-full bg-[#fdf8e1] py-4 shadow-md absolute top-0">
+        <div className="bg-[#fae588] min-h-screen ">
+          <header className="w-full py-4 absolute top-0 z-1">
             <div className="max-w-5xl mx-auto flex items-center justify-between px-4 sm:px-6 md:px-8">
-              <Link href="/" className="text-3xl font-bold text-gray-900">
+              <Link href="/" className="text-3xl font-bold">
                 <img src="/images/logo.png" alt="Idas Sommarhonung" className="h-12" />
               </Link>
               <nav className="space-x-6">
-                <Link href="/" className="text-lg text-gray-900 hover:text-yellow-700 transition-all">
+                <Link href="/" className="text-lg hover:text-yellow-700 transition-all">
                   Hem
                 </Link>
-                <Link href="/honung" className="text-lg text-gray-900 hover:text-yellow-700 transition-all">
+                <Link href="/honung" className="text-lg hover:text-yellow-700 transition-all">
                   Honung
                 </Link>
-                <Link href="/om-oss" className="text-lg text-gray-900 hover:text-yellow-700 transition-all">
+                <Link href="/om-oss" className="text-lg hover:text-yellow-700 transition-all">
                   Om oss
                 </Link>
               </nav>

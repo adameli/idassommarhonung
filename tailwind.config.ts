@@ -5,6 +5,7 @@ module.exports = {
         extend: {
             fontFamily: {
                 orpheus: ['Orpheus Pro', 'serif'],
+                garamond: ['var(--font-eb-garamond)', 'serif']
             },
         },
     },
