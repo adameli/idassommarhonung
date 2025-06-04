@@ -25,15 +25,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* styles/globals.css */
-/* @font-face {
-  font-family: "Orpheus Pro";
-  src: url("https://db.onlinewebfonts.com/t/2aea0ac500c896188f9ad191c231029c.eot");
-  src: url("https://db.onlinewebfonts.com/t/2aea0ac500c896188f9ad191c231029c.eot?#iefix") format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/2aea0ac500c896188f9ad191c231029c.woff2") format("woff2"),
-    url("https://db.onlinewebfonts.com/t/2aea0ac500c896188f9ad191c231029c.woff") format("woff"),
-    url("https://db.onlinewebfonts.com/t/2aea0ac500c896188f9ad191c231029c.ttf") format("truetype"),
-    url("https://db.onlinewebfonts.com/t/2aea0ac500c896188f9ad191c231029c.svg#Orpheus Pro") format("svg");
-  font-weight: normal;
-  font-style: normal;
-} */
+.section-container {
+  @apply py-16;
+}
+
+.div-container {
+  @apply max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-20;
+}
+
+.div-container-flex {
+  @apply flex flex-col md:flex-row items-center md:gap-5 justify-between
+}
