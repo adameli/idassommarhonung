@@ -1,5 +1,6 @@
-import Hexagon from '@/components/Hexagon';
+
 import RoadToHoneySection from '@/components/RoadToHoneySection';
+import StepByStepToHoneySection from '@/components/StepByStepToHoneySection';
 import Image from 'next/image';
 import React from 'react';
 
@@ -34,13 +35,7 @@ export default function LandingPage() {
       <RoadToHoneySection />
 
       {/* Honey Production Steps Section */}
-      <section className="flex flex-wrap justify-center gap-6 py-16">
-        {['Blommor', 'Nektarinsamling', 'Bivaxkakor', 'Honungsfyllning', 'Försegling', 'Färdig produkt'].map((step, index) => (
-          <Hexagon key={index} >
-            {step}
-          </Hexagon>
-        ))}
-      </section>
+      <StepByStepToHoneySection />
 
       <section className="flex flex-col items-center gap-4 text-center h-screen justify-center bg-[/images/bikaka.jpg] bg-cover bg-center bg-no-repeat">
 
